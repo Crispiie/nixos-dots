@@ -5,6 +5,7 @@
     ./user-packages.nix
     ./gtk.nix
     ./dconf.nix
+    ./waybar.nix
     ./catppuccin.nix
     ./fish.nix
     ./btop.nix

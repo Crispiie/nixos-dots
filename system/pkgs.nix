@@ -54,7 +54,6 @@
       wireguard-tools
       pavucontrol # Audio GUI
       iwgtk # Networking GUI
-      waybar # Taskbar
       playerctl # media
       nodePackages.bash-language-server
       dict # 🆕 Add this line
