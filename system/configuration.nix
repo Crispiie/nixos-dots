@@ -6,6 +6,7 @@
   imports = [ 
     ./bluetooth.nix
     ./boot.nix
+    ./catppuccin.nix
     ./flatpak.nix
     ./fonts.nix
     ./hard-drive.nix

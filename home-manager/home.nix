@@ -2,13 +2,13 @@
 {
   imports = [
     ./hyprland.nix
-    ./user-packages.nix
+    ./upkgs.nix
+    ./programs.nix
     ./gtk.nix
     ./dconf.nix
     ./waybar.nix
     ./catppuccin.nix
     ./fish.nix
-    ./btop.nix
     ./git.nix
   ];
   home.username = "crispi";

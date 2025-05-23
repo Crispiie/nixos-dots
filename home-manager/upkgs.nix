@@ -2,10 +2,13 @@
 {
   home.packages = with pkgs; [
     cava
+    tree
+    kitty
     discord
     obsidian
     ani-cli
     mpv
+    bat
     spotify-player
     nextcloud-client
     tmux
@@ -16,10 +19,8 @@
     cool-retro-term
     qutebrowser
     zathura
-    bat
   ];
 
-  programs.firefox.enable = true;
   programs.home-manager.enable = true;
 
 }

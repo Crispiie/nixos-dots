@@ -33,7 +33,6 @@
       xclip # X11 Clipboard
       grim # Screenshots
       slurp # Screenshots
-      kitty # Terminal
       rofi # Application Launcher
       yazi # CLI File Manager
       fzf # CLI Fuzzy Finder
