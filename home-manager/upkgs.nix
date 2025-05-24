@@ -13,6 +13,7 @@
     nextcloud-client
     tmux
     lazygit
+    overskride
     parsec-bin
     prismlauncher
     bash-completion

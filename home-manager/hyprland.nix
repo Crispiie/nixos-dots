@@ -4,8 +4,11 @@
     enable = true;
     settings = {
       monitor = [
+        # Desktop Monitors
         "DP-2,1920x1080@143,0x0,1"
         "HDMI-A-1,1920x1080@75,1920x0,1"
+        # Laptop Monitor
+        "eDP-1,1920x1080@60,0x0,1"
       ];
 
       env = [
@@ -16,7 +19,7 @@
 
       exec-once = [
         "waybar"
-        "swww-daemon && swww img /etc/.background"
+        "swww-daemon && swww img /home/$USER/nixos-dots/.background"
       ];
 
       general = {

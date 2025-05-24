@@ -10,7 +10,7 @@
 
         "modules-left" = [ "hyprland/workspaces" "network" "cava" ];
         "modules-center" = [ "clock" ];
-        "modules-right" = [ "custom/media" "pulseaudio" "tray" ];
+        "modules-right" = [ "custom/media" "pulseaudio" "bluetooth" "battery" "tray" ];
 
         "hyprland/workspaces" = {
           "active-only" = false;
@@ -21,6 +21,7 @@
           "on-scroll-up" = "hyprctl dispatch workspace e+1";
           "on-scroll-down" = "hyprctl dispatch workspace e-1";
           "persistent-workspaces" = {
+            "eDP-1" = 4;
             "HDMI-A-1" = 4;
             "DP-2" = 2;
           };
@@ -38,6 +39,39 @@
             "^(.*) - qutebrowser$" = " $1";
           };
         };
+
+    "battery" = {
+        "states" = {
+            "high" = 90;
+            "upper-medium" = 70;
+            "medium" = 50;
+            "lower-medium" = 30;
+            "low" = 10;
+        };
+        "format" = "{icon} {capacity}%";
+        "format-charging" = "󱐋{icon} {capacity}%";
+        "format-plugged" = "󰚥{icon} {capacity}%";
+        "format-time" = "{H} h {M} min";
+        "format-icons" = [ "󱃍" "󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹" ];
+        "tooltip-format" = "{timeTo}";
+    };
+
+        "bluetooth" = {
+          "format" = "󰂯";
+          "format-disabled" = "󰂲";
+          "format-connected" = "󰂱 {device_alias}";
+          "format-connected-battery" = "󰂱 {device_alias} (󰥉 {device_battery_percentage}%)";
+          # "format-device-preference" = [ "device1", "device2" ], // preference list deciding the displayed device;
+          "tooltip-format" = "{controller_alias}\t{controller_address} ({status})\n\n{num_connections} connected";
+          "tooltip-format-disabled" = "bluetooth off";
+          "tooltip-format-connected" = "{controller_alias}\t{controller_address} ({status})\n\n{num_connections} connected\n\n{device_enumerate}";
+          "tooltip-format-enumerate-connected" = "{device_alias}\t{device_address}";
+          "tooltip-format-enumerate-connected-battery" = "{device_alias}\t{device_address}\t({device_battery_percentage}%)";
+          "max-length" = 35;
+          "on-click" = "fish -c bluetoothctl disconnect {controller_address}";
+          "on-click-right" = "overskride";
+        };
+
 
         "custom/media" = {
           "format" = "{icon} {text}";
@@ -59,7 +93,7 @@
 
         "network" = {
           "format" = "󰤭";
-          "format-wifi" = "{icon}({signalStrength}%){essid}";
+          "format-wifi" = "{icon} {essid} ({signalStrength}%)";
           "format-icons" = [ "󰤯" "󰤟" "󰤢" "󰤥" "󰤨" ];
           "format-disconnected" = "󰤫 Disconnected";
           "tooltip-format" = "wifi <span color='#ee99a0'>off</span>";
@@ -188,7 +222,7 @@
         background-color: #f2cdcd;
       }
 
-      #network, #clock, #tray, #pulseaudio, #cava, #custom-media, #workspaces {
+      #network, #clock, #tray, #pulseaudio, #cava, #custom-media, #workspaces, #battery, #bluetooth {
         background-color: #313244;
         border-radius: 15px;
         padding-left: 15px;
@@ -197,6 +231,19 @@
       }
 
       #network {
+        color: #f5c2e7;
+      }
+
+      #battery {
+        background-color: #313244;
+        border-radius: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin: 2px;
+        color: #f2cdcd;
+      }
+
+      #bluetooth {
         color: #f5c2e7;
       }
 

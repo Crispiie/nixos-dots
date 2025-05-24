@@ -13,14 +13,14 @@
     ./hardware-configuration.nix
     ./hyprland.nix
     ./keyring.nix
-    #  ./wireguard.nix
     ./network.nix
-    ./nvidia.nix
+    #    ./nvidia.nix
     ./pkgs.nix
-    ./river.nix
+    #    ./river.nix
     ./sddm.nix
-    #   ./ssh.nix
+    ./ssh.nix
     ./user.nix
+    #    ./wireguard.nix
   ];
 
   # Enable Flakes, nix CLI tool, and Cachix
