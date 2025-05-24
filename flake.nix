@@ -19,7 +19,6 @@
         };
         modules = [
           ./system/configuration.nix
-          ./system/hard-drive.nix
           catppuccin.nixosModules.default
           home-manager.nixosModules.home-manager
           {

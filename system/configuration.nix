@@ -7,17 +7,19 @@
     ./bluetooth.nix
     ./boot.nix
     ./catppuccin.nix
-    ./flatpak.nix
+    #    ./flatpak.nix
     ./fonts.nix
-    ./hard-drive.nix
+    #    ./hard-drive.nix
     ./hardware-configuration.nix
     ./hyprland.nix
     ./keyring.nix
+    #  ./wireguard.nix
     ./network.nix
     ./nvidia.nix
     ./pkgs.nix
     ./river.nix
     ./sddm.nix
+    #   ./ssh.nix
     ./user.nix
   ];
 
